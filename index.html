@@ -3,29 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maintenance</title>
+  <title>K&M Tire | Maintenance</title>
   <style>
     body {
-      display: flex;
+      margin: 0;
       height: 100vh;
+      display: flex;
       align-items: center;
       justify-content: center;
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      background: #f4f4f4;
     }
-    .box {
+    .container {
       text-align: center;
       background: #fff;
-      padding: 2rem;
+      padding: 2rem 3rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+    h1 {
+      color: #004990; /* K&M blue */
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    .logo {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="box">
+  <div class="container">
+    <img class="logo" src="https://kmtire.com/wp-content/uploads/2021/03/KMLogo.png" alt="K&M Tire Logo">
     <h1>We’ll be back soon!</h1>
-    <p>Sorry for the inconvenience, we’re performing some maintenance right now.</p>
+    <p>
+      The <strong>K&M Tire Weblink</strong> system is temporarily unavailable while we perform scheduled maintenance.  
+      Please check back shortly.
+    </p>
+    <footer>
+      &copy; <span id="year"></span> K&M Tire, Inc.
+    </footer>
   </div>
+
+  <script>
+    // auto-fill year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
